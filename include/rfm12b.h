@@ -1,8 +1,8 @@
 #ifndef RFM12B_H
 #define RFM12B_H
 
-// Change according to hardware platform used this is for LINNODE v0.1
-// Modify to suit needs
+// Change according to hardware platform used this is for LINNODE v0.1 ( my HW platform based on atmega328p )
+// Modify to suit your needs
 
 #define RF_PORT PORTC
 #define RF_DDR DDRC
@@ -13,11 +13,7 @@
 #define SDO 4 		// SPI Data output (RFM12B side)
 #define NIRQ 0 		// (PORTC)
 
-
-//------------------------------------------------------------
-// MACROS
 #define RF12FREQ(freq)	((unsigned short)((freq-430.0)/0.0025))	
-
 // DEFINES
 
 #define RF_CMD_STATUS_READ		0x0000		// Read status Register
@@ -26,9 +22,9 @@
 #define RF_IDLE_MODE    		0x8209
 #define RF_SLEEP_MODE   		0x8201
 #define RF_WAKEUP_MODE  		0x8203
-#define RFM12_0000_RGIT_FFIT		0x8000		// TX ready for next byte or FIFO received data Status										
+#define RFM12_0000_RGIT_FFIT	0x8000		// TX ready for next byte or FIFO received data Status										
 #define RFM12_0000_POR			0x4000		// Power on Reset Status
-#define RFM12_0000_RGUR_FFOV		0x2000		// TX Register underun or RX FIFO Overflow Status
+#define RFM12_0000_RGUR_FFOV	0x2000		// TX Register underun or RX FIFO Overflow Status
 #define RFM12_0000_WKUP			0x1000		// Wakeup Timer overflow Status
 #define RFM12_0000_EXT			0x0800		// Interrup on external source Status
 #define RFM12_0000_LBD			0x0400		// Low battery detect Status
@@ -38,11 +34,10 @@
 #define RFM12_0000_DQD			0x0040		// Data Quality Dedector Status
 #define RFM12_0000_CRL			0x0020		// Clock Recovery Locked status
 #define RFM12_0000_ATGL			0x0010		// Toggling in each AFC Cycle
-#define RFM12_0000_OFFS_SIGN		0x0008		// Measured Offset Frequency Sign Value 1='+', 0='-' 
+#define RFM12_0000_OFFS_SIGN	0x0008		// Measured Offset Frequency Sign Value 1='+', 0='-' 
 #define RFM12_0000_OFFS			0x0004		// Measured offset Frequency value (3 bits) 
-#define RFM12_0000_OFFS_MASK		0x0003		// Measured offset mask
+#define RFM12_0000_OFFS_MASK	0x0003		// Measured offset mask
 
-// Functions
 	extern void			rf12_send(char* data,unsigned char size);
 	extern void			rf12_switchToRx(void);
 	extern void			rf12_switchToTx(void);

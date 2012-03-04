@@ -13,8 +13,6 @@
  * use the RFM12B module from hopeRF.
  */
 
-
-
 /** \brief Reset the FIFO buffer.
  *
  * A Call to this procedure resets the internal FIFO buffer.
@@ -140,7 +138,6 @@ void rf12_dataFilterCommand(uint8_t clkRecoveryMode,uint8_t clkRecoverySpeed,uin
 }
 
 
-
 /** \brief Software SPI send.
  * 
  * Software SPI implementation to communicate with
@@ -249,7 +246,7 @@ void rf12_setRSSI(uint8_t level)
 	_delay_ms(1);	
 }
 
-/** \brief Returns 1 when a carrier is detected to avoid RF collision.
+/** \brief Returns 1 when a carrier is detected, can be used to avoid RF collisions when using many nodes.
   *
   */
 inline uint8_t rf12_getRSSI(void)
