@@ -1,8 +1,11 @@
-RFM12B Library
+RFM12B Library for ATMega328p
 
 This is a general purpose library for the RF module RFM12B.
+The Library currently has support for encryption (blockTEA) and CRC32 and simple send and receive methods.
 
 Micro used: ATmega328p 
-PortBindings:	TODO
+PortBindings: PortC connected to RFM12B
+
+
 
 
