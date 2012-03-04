@@ -4,7 +4,20 @@ This is a general purpose library for the RF module RFM12B.
 The Library currently has support for encryption (blockTEA) and CRC32 and simple send and receive methods.
 
 Micro used: ATmega328p 
-PortBindings: PortC connected to RFM12B
+PortBindings: PortC connected to RFM12B, defined in rfm12b.h file
+
+#define RF_PORT PORTC
+#define RF_DDR DDRC
+#define RF_PIN PINC
+#define SDI 3	// SPI Data input (RFM12B side)
+#define SCK 5	// SPI clock
+#define CS 2	// SPI CS ( chip select )
+#define SDO 4	// SPI Data output (RFM12B side)
+#define NIRQ 0
+
+
+
+
 
 
 
