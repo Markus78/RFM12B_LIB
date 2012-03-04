@@ -1,0 +1,8 @@
+RFM12B Library
+
+This is a general purpose library for the RF module RFM12B.
+
+Micro used: ATmega328p 
+PortBindings:	TODO
+
+
