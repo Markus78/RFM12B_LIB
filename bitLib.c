@@ -1,13 +1,5 @@
 /*
 	Common bitwise operations and port operation library
-	written by Markus Lindblom 2010
-
-	Changelog
-
-	2010-05-29 Created library
-	2010-07	   Added custom atol function
-
-
 */
 
 #include <ctype.h>
@@ -18,9 +10,7 @@
  * \brief Common bit operations
  *
  * Common bitwise operations and port operation library
- * written by Lindblom 2010
  */
-
 
 /** \brief Check if bit is set
  *
